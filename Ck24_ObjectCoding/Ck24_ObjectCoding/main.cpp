@@ -1,19 +1,21 @@
 #include <iostream>
+#include "Bubble.h"
 
-struct Mytype
-{
-	int a;
-	float f;
-};
 
 int main()
 {
-	Mytype type = {};
+	long long a = 100;
+	long long b = 0;
 
-	Mytype* ptype = &type;
+	DataCopy(&b, sizeof(long long), &a);
+}
 
-	ptype->a = 20;
-	ptype->f = 34.f;
+void DataCopy(void* _DestNation, unsigned int _DataSize, void* _Source)
+{
 
-	return 0;
+	for (int i = 0; i < _DataSize; ++i)
+	{
+		((unsigned char*)_DestNation)[i] = ((unsigned char*)_Source)[i];
+	}
+
 }
