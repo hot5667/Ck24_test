@@ -50,6 +50,12 @@ int main()
 	// char, wchar_t 문자열 전용 자료형
 	short s = 97;
 	wchar_t wc = 97;
+	
+	// "문자열" - 쌍따음표 안에 적인 문자들은 문자열이라고 부른다.
+	// 문자열은 ROM 에 저장됨
+	printf("abcd");
+
+	const char* pString = "abcd";
 
 	return 0;
 }
