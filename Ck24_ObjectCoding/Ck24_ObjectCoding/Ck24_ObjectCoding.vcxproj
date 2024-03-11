@@ -139,17 +139,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="main00.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="main02.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="0308.txt" />
+    <Text Include="0310객체지향프로그래밍고급2주차.txt" />
     <Text Include="NetWorkProgramingtxt.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Bubble.h" />
+    <ClInclude Include="Bubble.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

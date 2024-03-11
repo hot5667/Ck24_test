@@ -8,14 +8,16 @@ int main()
 	long long b = 0;
 
 	DataCopy(&b, sizeof(long long), &a);
+
+	//memcpy(&b, &a, 8); 
 }
 
-void DataCopy(void* _DestNation, unsigned int _DataSize, void* _Source)
-{
-
-	for (int i = 0; i < _DataSize; ++i)
-	{
-		((unsigned char*)_DestNation)[i] = ((unsigned char*)_Source)[i];
-	}
-
-}
+//void DataCopy(void* _DestNation, unsigned int _DataSize, void* _Source)
+//{
+//
+//	for (int i = 0; i < _DataSize; ++i)
+//	{
+//		((unsigned char*)_DestNation)[i] = ((unsigned char*)_Source)[i];
+//	}
+//
+//}
